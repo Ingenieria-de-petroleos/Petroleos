@@ -150,8 +150,7 @@ function pintarGrupos(grupos) {
             </div>
             
             <div class="grupo-nodo__emblema">
-              <img src="${esc(grupo.logo)}" alt="Logo de ${esc(grupo.nombre)}" class="grupo-nodo__emblema-img">
-              <span class="grupo-nodo__sigla">${esc(grupo.sigla || grupo.nombre)}</span>
+              <img src="${esc(grupo.logo)}" alt="Logo de ${esc(grupo.nombre)}" class="grupo-nodo__emblema-img" loading="lazy">
             </div>
 
             <div class="grupo-nodo__hover-pill">
