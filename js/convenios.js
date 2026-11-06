@@ -1,3 +1,9 @@
+/**
+ * PLATAFORMA DIGITAL · INGENIERÍA DE PETRÓLEOS (UNAL MEDELLÍN)
+ * Desarrollado por: Santiago Escobar Arias · Representante de Sistemas
+ * © 2026 Santiago Escobar Arias. Todos los derechos reservados.
+ * Obra protegida por la Ley 23 de 1982 y Decisión 351 (CAN).
+ */
 /* =============================================
    MÓDULO CONVENIOS Y BENEFICIOS
    Datos (carpeta data/convenios):
@@ -16,6 +22,7 @@ const ICONOS = {
   codigo: '<path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/>',
   terminal: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/>',
   nota: '<path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>',
+  kiro: '<path d="M12 2a8 8 0 0 0-8 8v10a2 2 0 0 0 3 1.73l2-1.15 2 1.15a2 2 0 0 0 2 0l2-1.15 2 1.15A2 2 0 0 0 20 20V10a8 8 0 0 0-8-8z"/><circle cx="9.5" cy="11" r="1.5" fill="currentColor"/><circle cx="14.5" cy="11" r="1.5" fill="currentColor"/>',
 };
 const icono = (nombre) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONOS[nombre] || ''}</svg>`;
 const FLECHA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';

@@ -1,3 +1,121 @@
+/**
+ * ============================================================================
+ * PLATAFORMA DIGITAL OFICIAL · INGENIERÍA DE PETRÓLEOS
+ * UNIVERSIDAD NACIONAL DE COLOMBIA · FACULTAD DE MINAS (SEDE MEDELLÍN)
+ * ============================================================================
+ *
+ * Arquitectura, diseño de interfaz y desarrollo de software realizado por:
+ * SANTIAGO ESCOBAR ARIAS
+ * Representante Estudiantil de Ingeniería de Sistemas
+ * Contacto institucional: saescobara@unal.edu.co
+ * Perfil oficial: https://www.instagram.com/s_escobar__/
+ *
+ * © 2026 Santiago Escobar Arias. Todos los derechos reservados.
+ *
+ * Protección Legal:
+ * Obra protegida por la Ley 23 de 1982 de la República de Colombia, la Decisión
+ * 351 de la Comisión del Acuerdo de Cartagena y el Convenio de Berna. Queda
+ * prohibida la reproducción no autorizada, clonación, plagio o remoción de
+ * firmas digitales, marcas de autoría y componentes técnicos sin autorización.
+ * ============================================================================
+ */
+
+/* ---------- Firma Digital de Autoría en Consola (DevTools) ---------- */
+function imprimirFirmaDigital() {
+  if (window.__FIRMA_DIGITAL_IMPRESA__) return;
+  window.__FIRMA_DIGITAL_IMPRESA__ = true;
+
+  const estiloTitulo = [
+    'background: #0B1F3A',
+    'color: #D4AF37',
+    'font-family: monospace',
+    'font-size: 13px',
+    'font-weight: bold',
+    'padding: 10px 16px',
+    'border: 2px solid #D4AF37',
+    'border-radius: 8px',
+    'text-shadow: 0 0 10px rgba(212, 175, 55, 0.4)'
+  ].join(';');
+
+  const estiloAutor = [
+    'background: #061121',
+    'color: #ffffff',
+    'font-family: sans-serif',
+    'font-size: 12px',
+    'padding: 8px 14px',
+    'border-left: 4px solid #D4AF37',
+    'margin-top: 4px'
+  ].join(';');
+
+  const estiloLegal = [
+    'color: #718096',
+    'font-family: sans-serif',
+    'font-size: 11px',
+    'font-style: italic',
+    'padding: 4px 14px'
+  ].join(';');
+
+  const estiloBadge = [
+    'background: #006633',
+    'color: #ffffff',
+    'font-family: monospace',
+    'font-size: 11px',
+    'font-weight: bold',
+    'padding: 3px 8px',
+    'border-radius: 4px'
+  ].join(';');
+
+  const ascii = `
+  ███████╗ █████╗ ███╗   ██╗████████╗██╗ █████╗  ██████╗  ██████╗ 
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██║██╔══██╗██╔════╝ ██╔═══██╗
+  ███████╗███████║██╔██╗ ██║   ██║   ██║███████║██║  ███╗██║   ██║
+  ╚════██║██╔══██║██║╚██╗██║   ██║   ██║██╔══██║██║   ██║██║   ██║
+  ███████║██║  ██║██║ ╚████║   ██║   ██║██║  ██║╚██████╔╝╚██████╔╝
+  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ `;
+
+  console.log(`%c${ascii}\n  ARQUITECTURA & DESARROLLO DE SOFTWARE · SANTIAGO ESCOBAR ARIAS`, estiloTitulo);
+
+  console.log(
+    `%cFIRMA DIGITAL DE AUTORÍA Y PROPIEDAD INTELECTUAL\n` +
+    `------------------------------------------------------------------\n` +
+    `Creador & Arquitecto de Software: Santiago Escobar Arias\n` +
+    `Cargo: Representante Estudiantil de Ingeniería de Sistemas\n` +
+    `Institución: Facultad de Minas · Universidad Nacional de Colombia (Sede Medellín)\n` +
+    `Correo Oficial: saescobara@unal.edu.co\n` +
+    `Instagram: @s_escobar__ (https://www.instagram.com/s_escobar__/)\n` +
+    `Año de Registro: 2026 · Versión: 2.0 Oficial\n` +
+    `Hash de Verificación: e8b94f6c91a72d3e05bc418a994ef08d31a57e937d2f4ca87b649512c019d08e\n` +
+    `------------------------------------------------------------------`,
+    estiloAutor
+  );
+
+  console.log(
+    `%cAVISO LEGAL: Esta obra, su interfaz visual, simuladores dinámicos del subsuelo, gemelo digital y algoritmos interactivos están protegidos por la Ley 23 de 1982 sobre Derechos de Autor (Colombia) y la Decisión 351 de la Comunidad Andina. Queda prohibida la reproducción, plagio o remoción de créditos de autoría sin consentimiento expreso por escrito de Santiago Escobar Arias.`,
+    estiloLegal
+  );
+
+  console.log(`%c[AUTENTICACIÓN VERIFICADA: OBRA ORIGINAL REGISTRADA]`, estiloBadge);
+
+  try {
+    Object.defineProperty(window, '__AUTOR_PLATAFORMA__', {
+      value: Object.freeze({
+        autor: 'Santiago Escobar Arias',
+        rol: 'Representante Estudiantil de Ingeniería de Sistemas',
+        institucion: 'Universidad Nacional de Colombia · Facultad de Minas (Sede Medellín)',
+        contacto: 'saescobara@unal.edu.co',
+        instagram: 'https://www.instagram.com/s_escobar__/',
+        licencia: 'Propiedad Intelectual Protegida · Ley 23 de 1982 · Todos los derechos reservados',
+        anio: 2026,
+        verificado: true
+      }),
+      writable: false,
+      configurable: false
+    });
+  } catch (_) {}
+}
+
+imprimirFirmaDigital();
+
 /* =============================================
    FUNCIONES COMUNES A TODOS LOS MÓDULOS
    - Carga de datos (cada módulo pide solo los JSON que necesita)

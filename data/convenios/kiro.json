@@ -1,0 +1,66 @@
+{
+ "id": "kiro",
+ "queEs": "El Plan Estudiantil de Kiro es un nuevo convenio de la Universidad Nacional de Colombia en alianza con Amazon Web Services (AWS) a través de la Dirección Nacional de Estrategia Digital (DNED). Brinda a los estudiantes 1 año gratuito de desarrollo de software asistido por Inteligencia Artificial, convirtiendo ideas e instrucciones en aplicaciones funcionales, arquitecturas estructuradas y código real listo para ejecutar.",
+ "quienes": [
+  "Estudiantes activos de pregrado y posgrado de la Universidad Nacional de Colombia",
+  "Comunidad universitaria con correo institucional activo (@unal.edu.co)"
+ ],
+ "incluye": [
+  "1.000 créditos mensuales de Inteligencia Artificial gratis durante todo un año (100% gratuito)",
+  "Generación de código funcional, arquitecturas estructuradas y prototipos MVP para materias, proyectos de clase o hackatones",
+  "Aceleración para proyectos de emprendimiento y startups universitarias",
+  "Acceso a la plataforma y respaldo de Amazon Web Services (AWS)",
+  "Acompañamiento y soporte institucional de la Dirección Nacional de Estrategia Digital (DNED)"
+ ],
+ "requisitos": [
+  "Ser estudiante activo de la Universidad Nacional de Colombia",
+  "Tener cuenta y correo institucional activo con dominio @unal.edu.co"
+ ],
+ "pasos": [
+  {
+   "titulo": "Mira el video tutorial oficial",
+   "texto": "Abre el video tutorial en YouTube (botón principal de abajo) donde se explica paso a paso cómo acceder al convenio, registrarte y aprovechar los créditos asignados a tu cuenta."
+  },
+  {
+   "titulo": "Consulta las directrices en el portal de la DNED",
+   "texto": "Ingresa al sitio oficial de la Dirección Nacional de Estrategia Digital (dned.unal.edu.co) para consultar el enlace oficial de vinculación del convenio UNAL - Kiro AWS."
+  },
+  {
+   "titulo": "Regístrate con tu correo @unal.edu.co",
+   "texto": "Crea o ingresa a tu cuenta en Kiro validando tu condición universitaria mediante tu correo institucional UNAL para que se te active el plan anual de 1.000 créditos mensuales."
+  },
+  {
+   "titulo": "Comienza a programar y generar tus aplicaciones con IA",
+   "texto": "Ingresa tus requerimientos, ideas o especificaciones técnicas; Kiro generará el código, las dependencias y la estructura modular completa de tu aplicación."
+  }
+ ],
+ "enlaces": [
+  {
+   "texto": "Ver Tutorial de Kiro en YouTube",
+   "url": "https://youtu.be/_CjEy_mtIjM?si=W2qTw-v7UpkoP_tz",
+   "principal": true
+  },
+  {
+   "texto": "Portal Oficial DNED (dned.unal.edu.co)",
+   "url": "https://dned.unal.edu.co"
+  }
+ ],
+ "soporte": {
+  "texto": "Para soporte institucional y consultas sobre el convenio, contacta a la",
+  "correo": "dned@unal.edu.co"
+ },
+ "consejos": [
+  "Utiliza siempre tu correo @unal.edu.co para mantener activos los 1.000 créditos mensuales durante todo el año.",
+  "El video tutorial detalla trucos y mejores prácticas para describir tus aplicaciones y obtener código de mayor calidad."
+ ],
+ "fuentes": [
+  {
+   "titulo": "Dirección Nacional de Estrategia Digital (DNED) · UNAL",
+   "url": "https://dned.unal.edu.co"
+  },
+  {
+   "titulo": "Video Tutorial Kiro UNAL · YouTube",
+   "url": "https://youtu.be/_CjEy_mtIjM?si=W2qTw-v7UpkoP_tz"
+  }
+ ]
+}
