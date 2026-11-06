@@ -1,0 +1,120 @@
+{
+  "componentes": [
+    {
+      "id": "fundamentacion",
+      "nombre": "Fundamentación",
+      "color": "#0E4B75",
+      "descripcion": "Ciencias básicas: matemáticas, física y química fundamentales para el análisis de fluidos, transferencia de energía y modelación matemática del subsuelo."
+    },
+    {
+      "id": "disciplinar",
+      "nombre": "Formación disciplinar o profesional",
+      "color": "#0B1F3A",
+      "descripcion": "Ingeniería básica, termodinámica de hidrocarburos, perforación y completamiento de pozos, yacimientos, geología, producción y proyectos de ingeniería."
+    },
+    {
+      "id": "libre-eleccion",
+      "nombre": "Libre elección",
+      "color": "#D4AF37",
+      "descripcion": "Créditos de libre elección (20% del plan) para profundizar en transición energética, economía del petróleo, geociencias avanzadas u otras áreas de interés."
+    }
+  ],
+  "agrupaciones": [
+    {
+      "id": "matematicas-probabilidad-estadistica",
+      "componente": "fundamentacion",
+      "nombre": "Matemáticas, Probabilidad y Estadística",
+      "exigidos": 31,
+      "obligatorios": 27,
+      "optativos": 4
+    },
+    {
+      "id": "quimica",
+      "componente": "fundamentacion",
+      "nombre": "Química",
+      "exigidos": 5,
+      "obligatorios": 3,
+      "optativos": 2
+    },
+    {
+      "id": "fisica",
+      "componente": "fundamentacion",
+      "nombre": "Física",
+      "exigidos": 12,
+      "obligatorios": 12,
+      "optativos": 0
+    },
+    {
+      "id": "ingenieria-basica",
+      "componente": "disciplinar",
+      "nombre": "Ingeniería Básica",
+      "exigidos": 12,
+      "obligatorios": 12,
+      "optativos": 0
+    },
+    {
+      "id": "termodinamica",
+      "componente": "disciplinar",
+      "nombre": "Termodinámica",
+      "exigidos": 6,
+      "obligatorios": 3,
+      "optativos": 3
+    },
+    {
+      "id": "perforacion-produccion",
+      "componente": "disciplinar",
+      "nombre": "Perforación y Producción",
+      "exigidos": 18,
+      "obligatorios": 18,
+      "optativos": 0
+    },
+    {
+      "id": "yacimientos-evaluacion-formaciones",
+      "componente": "disciplinar",
+      "nombre": "Yacimientos y Evaluación de Formaciones",
+      "exigidos": 18,
+      "obligatorios": 18,
+      "optativos": 0
+    },
+    {
+      "id": "geologia",
+      "componente": "disciplinar",
+      "nombre": "Geología",
+      "exigidos": 10,
+      "obligatorios": 7,
+      "optativos": 3
+    },
+    {
+      "id": "proyectos-ingenieria",
+      "componente": "disciplinar",
+      "nombre": "Proyectos en Ingeniería",
+      "exigidos": 10,
+      "obligatorios": 10,
+      "optativos": 0
+    },
+    {
+      "id": "optativas-disciplinares",
+      "componente": "disciplinar",
+      "nombre": "Optativas Disciplinares",
+      "exigidos": 9,
+      "obligatorios": 0,
+      "optativos": 9
+    },
+    {
+      "id": "trabajo-de-grado",
+      "componente": "disciplinar",
+      "nombre": "Trabajo de Grado",
+      "exigidos": 6,
+      "obligatorios": 6,
+      "optativos": 0
+    },
+    {
+      "id": "libre-eleccion",
+      "componente": "libre-eleccion",
+      "nombre": "Libre Elección",
+      "exigidos": 35,
+      "obligatorios": 0,
+      "optativos": 35
+    }
+  ]
+}

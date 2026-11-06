@@ -1,0 +1,54 @@
+[
+  {
+    "id": "spe",
+    "nombre": "SPE UNALMED",
+    "sigla": "SPE",
+    "subtitulo": "Society of Petroleum Engineers · Student Chapter UNAL Medellín",
+    "logo": "img/logo-petroleos.png",
+    "tipo": "Capítulo Internacional",
+    "color": "#0B1F3A",
+    "colorAcento": "#D4AF37",
+    "enlace": "https://www.instagram.com/spe_unalmed/",
+    "usuarioIg": "@spe_unalmed",
+    "descripcion": "Capítulo estudiantil oficial de la Society of Petroleum Engineers en la UNAL Medellín. Conecta a la comunidad con la industria energética global mediante simposios técnicos, paper contests, cursos de software especializado y conferencias internacionales."
+  },
+  {
+    "id": "acipet",
+    "nombre": "ACIPET UNAL Medellín",
+    "sigla": "ACIPET",
+    "subtitulo": "Asociación Colombiana de Ingenieros de Petróleos · Capítulo Estudiantil",
+    "logo": "img/logo-petroleos.png",
+    "tipo": "Gremio y Capítulo Nacional",
+    "color": "#006633",
+    "colorAcento": "#D4AF37",
+    "enlace": "https://www.instagram.com/acipet_unal/",
+    "usuarioIg": "@acipet_unal",
+    "descripcion": "Capítulo estudiantil del gremio oficial de los ingenieros de petróleos en Colombia. Fomenta el ejercicio ético, la proyección laboral, visitas técnicas a campos e instalaciones, foros de política energética y vinculación gremial."
+  },
+  {
+    "id": "eage",
+    "nombre": "EAGE UNALMED",
+    "sigla": "EAGE",
+    "subtitulo": "European Association of Geoscientists and Engineers",
+    "logo": "img/logo-petroleos.png",
+    "tipo": "Capítulo Geocientífico Internacional",
+    "color": "#0E4B75",
+    "colorAcento": "#D4AF37",
+    "enlace": "https://www.instagram.com/eage_unalmed/",
+    "usuarioIg": "@eage_unalmed",
+    "descripcion": "Capítulo estudiantil multidisciplinario de geocientíficos e ingenieros. Promueve la investigación e innovación en geofísica aplicada, sísmica de reflexión, modelado geológico 3D, petrofísica avanzada e ingeniería de yacimientos."
+  },
+  {
+    "id": "etsg",
+    "nombre": "ETSG UNAL",
+    "sigla": "ETSG",
+    "subtitulo": "Energy Transition Student Group · UNAL",
+    "logo": "img/logo-petroleos.png",
+    "tipo": "Grupo de Innovación y Transición",
+    "color": "#1C1C1C",
+    "colorAcento": "#D4AF37",
+    "enlace": "https://www.instagram.com/etsgunal/",
+    "usuarioIg": "@etsgunal",
+    "descripcion": "Colectivo pionero enfocado en liderar la transición energética justa y sostenible. Desarrolla proyectos académicos y divulgativos en energía geotérmica profunda, captura y almacenamiento de carbono (CCUS), hidrógeno y descarbonización."
+  }
+]

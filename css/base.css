@@ -1,0 +1,1254 @@
+/* =========================================================
+   INGENIERÍA DE PETRÓLEOS · UNAL MEDELLÍN — ESTILOS COMUNES
+   Los usan todas las páginas (módulos).
+   1. Variables y base
+   2. Fondos con fotos
+   3. Barra superior y navegación
+   4. Portada
+   5. Títulos de sección y mensajes
+   6. Pie (Diseño con dos tarjetas oficiales)
+   7. Mensaje flotante de bienvenida (Diseño modal oficial)
+   ========================================================= */
+
+
+/* ---------- 1. Variables y base ---------- */
+
+:root {
+  /* Paleta Oficial Ingeniería de Petróleos */
+  --azul-petroleo: #0B1F3A;        /* Primario: Profundo, navegación, encabezados */
+  --dorado-ambar: #D4AF37;         /* Acento: Dorado / Ámbar de hidrocarburos y excelencia */
+  --dorado-suave: #FBF4D8;         /* Fondo suave de insignias y elementos secundarios */
+  --negro-crudo: #1C1C1C;          /* Secundario: Contraste profundo, texto principal */
+  --verde-minas: #006633;          /* Institucional: Verde oficial Facultad de Minas */
+  --gris-arena: #F5F7FA;           /* Fondo claro: Gris arena moderno y limpio */
+  --azul-acero: #1A3E6D;
+
+  /* Aliases para compatibilidad total con módulos existentes */
+  --azul-marino: #0B1F3A;          /* Garantiza alto contraste en tabs, modales y textos */
+  --verde-bosque: #006633;
+  --turquesa: #D4AF37;
+  --lima-vibrante: #D4AF37;
+  --lima-suave: #FBF4D8;
+
+  --color-primario: var(--azul-petroleo);
+  --color-acento: var(--dorado-ambar);
+  --color-secundario: var(--negro-crudo);
+  --color-institucional: var(--verde-minas);
+
+  --azul: #0B1F3A;
+  --azul-oscuro: #061120;
+  --azul-brillante: #1E4E8C;
+  --papel: #F5F7FA;
+  --tinta: #1C1C1C;
+  --tinta-suave: #2E3845;
+  --gris: #5A697A;
+  --linea: #D8DFE8;
+
+  /* Colores de los componentes de la malla */
+  --fundamentacion: #0E4B75;       /* Azul Geológico / Ciencias Básicas */
+  --disciplinar: #0B1F3A;          /* Azul Petróleo Profundo (Profesional / Disciplinar) */
+  --libre: #D4AF37;                /* Dorado / Ámbar (Libre Elección) */
+
+  /* Tipografías modernas para Ingeniería de Petróleos */
+  --letra-titulo: 'Space Grotesk', 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --letra-universidad: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --letra-texto: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --letra-codigo: 'JetBrains Mono', monospace;
+  --letra-estrecha: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--letra-texto);
+  line-height: 1.55;
+  color: var(--tinta);
+  background: url(../img/textura.svg), var(--papel);
+}
+
+h1, h2, h3, h4, p { margin: 0; }
+svg { display: block; }
+button { font: inherit; color: inherit; cursor: pointer; }
+a { color: var(--azul-brillante); }
+
+.contenedor {
+  width: min(1180px, 100% - 32px);
+  margin-inline: auto;
+}
+
+.solo-lectores {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+
+/* ---------- 2. Fondos con fotos de la Facultad de Minas / Entorno Energético ---------- */
+
+.foto {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--azul-petroleo);
+}
+.foto::before,
+.foto::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+.foto::before {
+  inset: -14px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+}
+.foto::after {
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 31, 58, 0.94) 0%, rgba(7, 20, 38, 0.88) 58%, rgba(28, 28, 28, 0.96) 100%);
+}
+.foto--entrada::before { background-image: url(../img/campus-entrada.jpg); }
+.foto--panoramica::before,
+.foto--edificio::before { background-image: url(../img/campus-edificio.jpg); }
+
+
+/* ---------- 3. Barra superior y navegación ---------- */
+
+.barra {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(6, 17, 33, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 2px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.1);
+  transition: background .2s ease, box-shadow .2s ease;
+}
+
+/* Línea de oleoducto / haz de energía superior */
+.barra::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(212, 175, 55, 0.2) 15%, 
+    #FFE57F 50%, 
+    rgba(212, 175, 55, 0.2) 85%, 
+    transparent 100%);
+  background-size: 200% 100%;
+  animation: flujoPipeline 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes flujoPipeline {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+.barra__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 68px;
+}
+
+.barra__marca {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform .2s ease;
+}
+
+.barra__marca:hover {
+  transform: translateY(-1px);
+}
+
+.barra__escudo {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.barra__escudo-halo {
+  position: absolute;
+  inset: -4px;
+  border-radius: 14px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.6) 0%, transparent 70%);
+  opacity: 0.6;
+  animation: haloBreathing 3s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes haloBreathing {
+  0% { transform: scale(0.95); opacity: 0.3; }
+  100% { transform: scale(1.12); opacity: 0.8; }
+}
+
+.barra__escudo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+  padding: 2px;
+  border: 2px solid var(--dorado-ambar);
+  background: #ffffff;
+  display: block;
+  box-shadow: 0 4px 14px rgba(11, 31, 58, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.barra__texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.barra__carrera-nombre {
+  font-family: var(--letra-universidad);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.barra__carrera-facultad {
+  font-family: var(--letra-texto);
+  font-size: 11px;
+  letter-spacing: .02em;
+  color: var(--dorado-ambar);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* =========================================================
+   MANIFOLD DE NAVEGACIÓN: OLEODUCTO DINÁMICO DE CRUDO
+   ========================================================= */
+
+.nav-manifold {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(11, 31, 58, 0.65);
+  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  border-radius: 999px;
+  padding: 4px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5), 0 4px 20px rgba(0, 0, 0, 0.35);
+  isolation: isolate;
+}
+
+/* Tubería / Pista interna del fluido */
+.nav-manifold__tuberia {
+  position: absolute;
+  inset: 4px;
+  border-radius: 999px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* El bloque o gota de crudo líquido que se desplaza hacia la pestaña seleccionada */
+.nav-manifold__crudo-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ECC862 0%, #D4AF37 40%, #B8860B 80%, #704E07 100%);
+  box-shadow: 0 0 22px rgba(212, 175, 55, 0.75), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  transform-origin: center;
+  will-change: left, width, transform;
+}
+
+/* Estilo y onda de viscosidad mientras el crudo viaja */
+.nav-manifold__crudo-slider.is-fluyendo {
+  background: linear-gradient(90deg, 
+    #704E07 0%, 
+    #B8860B 20%, 
+    #FFE57F 50%, 
+    #D4AF37 80%, 
+    #704E07 100%);
+  background-size: 200% 100%;
+  animation: crudoSurge .45s linear infinite;
+  box-shadow: 0 0 28px rgba(255, 229, 127, 0.9), inset 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes crudoSurge {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+.crudo-slider__onda {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.45) 0%, transparent 70%);
+  opacity: 0.7;
+}
+
+.crudo-slider__gota {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFE57F;
+  box-shadow: 0 0 8px #FFE57F;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.nav-manifold__crudo-slider.is-fluyendo .crudo-slider__gota {
+  opacity: 1;
+}
+
+/* Estaciones de la tubería */
+.nav-manifold__estaciones {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-estacion {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: var(--letra-universidad);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: #CFD8DC;
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color .2s ease;
+  user-select: none;
+}
+
+.nav-estacion__cod {
+  font-family: var(--letra-codigo);
+  font-size: 10px;
+  color: var(--dorado-ambar);
+  opacity: 0.75;
+  transition: color .2s, opacity .2s;
+}
+
+.nav-estacion:hover {
+  color: #FFE57F;
+}
+
+.nav-estacion:hover .nav-estacion__cod {
+  opacity: 1;
+  color: #FFE57F;
+}
+
+/* Pestaña activa: iluminada directamente por el crudo líquido */
+.nav-estacion.is-activa {
+  color: var(--azul-petroleo) !important;
+  font-weight: 800;
+}
+
+.nav-estacion.is-activa .nav-estacion__cod {
+  color: var(--azul-petroleo) !important;
+  opacity: 1;
+  font-weight: 800;
+}
+
+.nav-estacion__pulso {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--azul-petroleo);
+  box-shadow: 0 0 0 0 rgba(11, 31, 58, 0.6);
+  animation: pulsoEstacion 1.8s infinite;
+  margin-left: 2px;
+}
+
+@keyframes pulsoEstacion {
+  0% { box-shadow: 0 0 0 0 rgba(11, 31, 58, 0.8); }
+  70% { box-shadow: 0 0 0 6px rgba(11, 31, 58, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(11, 31, 58, 0); }
+}
+
+.nav-estacion:focus-visible {
+  outline: 2px solid var(--dorado-ambar);
+  outline-offset: 2px;
+}
+
+/* Botón menú móvil (oculto en pantallas grandes) */
+.barra__boton-menu {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(212, 175, 55, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-family: var(--letra-universidad);
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background .15s, border-color .15s, color .15s, transform .1s;
+}
+.barra__boton-menu:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+}
+.barra__boton-menu:active {
+  transform: scale(0.97);
+}
+.barra__boton-menu:focus-visible {
+  outline: 3px solid var(--dorado-ambar);
+  outline-offset: 2px;
+}
+.barra__icono {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.barra__icono svg {
+  width: 18px;
+  height: 18px;
+}
+.barra__icono--cerrar {
+  display: none;
+}
+
+/* Estado abierto en la barra */
+.barra.is-menu-abierto .barra__boton-menu {
+  background: #fff;
+  color: var(--azul-petroleo);
+  border-color: var(--dorado-ambar);
+}
+.barra.is-menu-abierto .barra__icono--abrir {
+  display: none;
+}
+.barra.is-menu-abierto .barra__icono--cerrar {
+  display: flex;
+}
+
+
+/* ---------- 4. Portada ---------- */
+
+.portada__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 72px 0 80px;
+}
+.portada--corta .portada__contenido { padding: 48px 0 52px; }
+
+.portada__lugar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(11, 31, 58, 0.75);
+  border: 1.5px solid rgba(212, 175, 55, 0.5);
+  color: var(--dorado-ambar);
+  font-family: var(--letra-universidad);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  backdrop-filter: blur(8px);
+}
+.portada__titulo { margin-top: 6px; }
+.portada__antetitulo {
+  display: block;
+  font-family: var(--letra-universidad);
+  font-size: clamp(14px, 2.2vw, 20px);
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--dorado-ambar);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Tipografía de portada moderna para Petróleos */
+.letras-varsity {
+  position: relative;
+  display: inline-block;
+  font-family: var(--letra-titulo);
+  font-weight: 800;
+  font-size: clamp(48px, 9vw, 98px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 4px 22px rgba(11, 31, 58, 0.85);
+}
+.portada--corta .letras-varsity { font-size: clamp(40px, 7vw, 82px); }
+.letras-varsity--sub {
+  display: block;
+  margin-top: 4px;
+  font-size: clamp(44px, 8.5vw, 92px);
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #FFE57F 0%, #D4AF37 50%, #F5C518 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 18px rgba(11, 31, 58, 0.7));
+}
+.letras-varsity::before {
+  display: none;
+}
+
+.portada__logo-wrap {
+  margin-bottom: 20px;
+}
+.portada__logo {
+  width: 125px;
+  height: 125px;
+  border-radius: 20px;
+  object-fit: contain;
+  padding: 6px;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .45), 0 0 0 4px var(--dorado-ambar), 0 0 24px rgba(212, 175, 55, 0.35);
+  background: #fff;
+  display: block;
+  margin: 0 auto;
+  transition: transform .25s ease;
+}
+.portada__logo:hover {
+  transform: scale(1.05);
+}
+
+.portada__subtitulo {
+  margin-top: 14px;
+  font-family: var(--letra-titulo);
+  font-size: clamp(24px, 4.2vw, 44px);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+}
+.portada__texto {
+  max-width: 620px;
+  margin-top: 14px;
+  font-size: 17px;
+  color: #eaf0f8;
+}
+
+.portada__cifras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 36px 0 0;
+  padding: 4px;
+  list-style: none;
+  border: 1.5px solid rgba(212, 175, 55, .4);
+  border-radius: 24px;
+  background: rgba(11, 31, 58, .85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px -10px rgba(0,0,0,0.45);
+}
+.portada__cifras li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  padding: 12px 24px;
+  font-family: var(--letra-titulo);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--dorado-ambar);
+}
+.portada__cifras li + li { border-left: 1px solid rgba(255, 255, 255, .25); }
+.portada__cifras small {
+  margin-top: 3px;
+  font-family: var(--letra-texto);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .02em;
+  text-transform: none;
+  color: #FBF4D8;
+}
+
+.portada__boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 54px;
+  margin-top: 28px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: var(--dorado-ambar);
+  color: var(--negro-crudo);
+  font-family: var(--letra-universidad);
+  font-weight: 700;
+  font-size: 14.5px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 8px 24px -4px rgba(212, 175, 55, .5), 0 0 0 3px rgba(11, 31, 58, 0.4);
+  transition: transform .15s, background .15s, box-shadow .15s;
+}
+.portada__boton:hover {
+  transform: translateY(-2px);
+  background: #f7e8a4;
+  box-shadow: 0 12px 28px -4px rgba(212, 175, 55, .65), 0 0 0 3px var(--dorado-ambar);
+}
+.portada__boton svg { width: 18px; height: 18px; color: var(--negro-crudo); }
+
+.portada__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+.portada__acciones .portada__boton {
+  margin-top: 0;
+}
+.portada__boton--secundario {
+  background: rgba(11, 31, 58, .85);
+  color: #fff;
+  border: 1.5px solid rgba(212, 175, 55, .5);
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .5);
+}
+.portada__boton--secundario:hover {
+  background: var(--azul-petroleo);
+  border-color: var(--dorado-ambar);
+  color: #fff;
+  box-shadow: 0 12px 26px -8px rgba(212, 175, 55, .4);
+}
+.portada__boton--secundario svg {
+  color: var(--dorado-ambar);
+}
+
+
+/* ---------- 5. Títulos de sección y mensajes ---------- */
+
+.seccion { padding: 72px 0; }
+
+.seccion-titulo {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.seccion-titulo__antetitulo {
+  font-family: var(--letra-universidad);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--dorado-ambar);
+}
+.seccion-titulo h2 {
+  margin-top: 6px;
+  font-family: var(--letra-titulo);
+  font-weight: 700;
+  font-size: clamp(30px, 4.5vw, 44px);
+  line-height: 1.15;
+  color: var(--azul-petroleo);
+  -webkit-text-stroke: 0;
+  filter: none;
+}
+.seccion-titulo__intro { margin-top: 12px; font-size: 16.5px; color: var(--tinta-suave); }
+
+.aviso {
+  max-width: 560px;
+  margin: 40px auto;
+  padding: 22px 24px;
+  border: 2px dashed var(--dorado-ambar);
+  border-radius: 18px;
+  background: #fff;
+  text-align: center;
+  color: var(--tinta-suave);
+}
+.aviso strong { color: var(--azul-petroleo); }
+.aviso code {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #eef3f9;
+  font-size: 14px;
+}
+
+.cargando {
+  padding: 48px 0;
+  text-align: center;
+  font-family: var(--letra-universidad);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--gris);
+}
+
+
+/* ---------- 6. Pie de Página (Idéntico al diseño con 2 tarjetas) ---------- */
+
+.pie {
+  background: #ecebe6;
+  border-top: 1px solid #dddcd6;
+  padding: 48px 16px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.pie__marca-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.pie__escudo {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.pie__escudo-img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 4px;
+  border: 1px solid #d4d3cc;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+.pie__pildoras-carrera {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.pie__pildora {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #dfded8;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform .15s, border-color .15s, box-shadow .15s;
+}
+
+.pie__pildora:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pie__pildora--ig {
+  color: var(--azul-petroleo);
+  border-color: var(--dorado-ambar);
+}
+.pie__pildora--ig:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--azul-petroleo);
+}
+
+.pie__pildora--wpp {
+  color: var(--verde-minas);
+  border-color: var(--verde-minas);
+}
+.pie__pildora--wpp:hover {
+  background: rgba(0, 102, 51, 0.08);
+  border-color: var(--verde-minas);
+}
+
+.pie__pildora--drive {
+  color: var(--azul-petroleo);
+  border-color: var(--dorado-ambar);
+}
+.pie__pildora--drive:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--azul-petroleo);
+}
+
+.pie__titulo-carrera {
+  font-size: 13.5px;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pie__titulo-carrera strong {
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* Rejilla de dos tarjetas */
+.pie__tarjetas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 450px));
+  justify-content: center;
+  gap: 24px;
+  width: min(940px, 100%);
+  margin: 0 auto;
+}
+
+.pie__tarjeta {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e1db;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pie__tarjeta--representacion {
+  border-top: 4px solid var(--dorado-ambar);
+}
+
+.pie__tarjeta--desarrollo {
+  border-top: 4px solid var(--azul-petroleo);
+}
+
+.pie__tarjeta-sub {
+  font-family: var(--letra-universidad);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.pie__tarjeta--representacion .pie__tarjeta-sub {
+  color: #B8860B;
+}
+
+.pie__tarjeta--desarrollo .pie__tarjeta-sub {
+  color: var(--azul-petroleo);
+}
+
+.pie__tarjeta-nombre {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #374151;
+  margin: 0;
+}
+
+.pie__tarjeta-nombre strong {
+  color: var(--azul-petroleo);
+  font-weight: 700;
+}
+
+.pie__tarjeta-enlaces {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.pie__tarjeta-enlaces--segunda {
+  margin-top: 0;
+}
+
+.pie__enlace-contacto {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .15s, transform .15s;
+}
+
+.pie__enlace-contacto:hover {
+  transform: translateY(-1px);
+}
+
+.pie__enlace-contacto--wpp {
+  color: var(--verde-minas);
+}
+.pie__enlace-contacto--wpp:hover {
+  color: #0b8043;
+}
+
+.pie__enlace-contacto--correo {
+  color: var(--azul-petroleo);
+}
+.pie__enlace-contacto--correo:hover {
+  color: var(--dorado-ambar);
+}
+
+.pie__enlace-contacto--ig {
+  color: #B8860B;
+}
+.pie__enlace-contacto--ig:hover {
+  color: var(--azul-petroleo);
+}
+
+
+/* ---------- 7. Mensaje flotante de bienvenida (Diseño modal oficial) ---------- */
+
+.toast-autor {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  max-width: 440px;
+  width: calc(100% - 32px);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
+  transition: opacity .35s cubic-bezier(0.16, 1, 0.3, 1), transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast-autor.is-visible {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.toast-autor.is-hiding {
+  opacity: 0;
+  transform: translateY(16px) scale(0.95);
+}
+
+.toast-autor__tarjeta {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px 26px 20px;
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.toast-autor__cerrar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  border: none;
+  color: #4b5563;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background .15s, color .15s, transform .1s;
+}
+
+.toast-autor__cerrar:hover {
+  background: #e5e7eb;
+  color: #111827;
+  transform: scale(1.05);
+}
+
+.toast-autor__cabecera {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-right: 32px;
+}
+
+.toast-autor__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 2px solid var(--dorado-ambar);
+  padding: 2px;
+  background: #ffffff;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.toast-autor__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+}
+
+.toast-autor__titulos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toast-autor__nombre {
+  font-family: var(--letra-titulo);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--azul-petroleo);
+  line-height: 1.2;
+}
+
+.toast-autor__cargo {
+  font-family: var(--letra-universidad);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--verde-minas);
+  margin-top: 2px;
+}
+
+.toast-autor__mensaje {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #374151;
+  margin: 0;
+}
+
+.toast-autor__mensaje strong {
+  color: var(--azul-petroleo);
+  font-weight: 700;
+}
+
+.toast-autor__pildoras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.toast-autor__pildora {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .15s, box-shadow .15s;
+}
+
+.toast-autor__pildora:hover {
+  transform: translateY(-1px);
+}
+
+.toast-autor__pildora--wpp {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: var(--verde-minas);
+}
+
+.toast-autor__pildora--ig {
+  background: #fff8e1;
+  border: 1px solid var(--dorado-ambar);
+  color: #B8860B;
+}
+
+.toast-autor__pildora--correo {
+  background: #f0f4f9;
+  border: 1px solid #c7d8eb;
+  color: var(--azul-petroleo);
+}
+
+.toast-autor__btn-ok {
+  background: var(--azul-petroleo);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-family: var(--letra-universidad);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 4px;
+  box-shadow: 0 4px 12px rgba(11, 31, 58, 0.35);
+  transition: background .15s, transform .1s;
+}
+
+.toast-autor__btn-ok:hover {
+  background: var(--dorado-ambar);
+  color: var(--negro-crudo);
+  transform: translateY(-1px);
+}
+
+
+/* ---------- Tablet y móvil ---------- */
+
+@keyframes menuDesplegar {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1140px) {
+  .nav-estacion {
+    padding: 8px 12px;
+    font-size: 11.5px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 980px) {
+  .barra__contenido {
+    min-height: 58px;
+    padding-block: 8px;
+  }
+  .barra__boton-menu {
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+  .nav-manifold {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(6, 17, 33, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 0;
+    border: none;
+    border-bottom: 3.5px solid var(--dorado-ambar);
+    box-shadow: 0 16px 36px -6px rgba(0, 0, 0, .85);
+    padding: 16px;
+    flex-direction: column;
+    max-height: calc(100vh - 65px);
+    overflow-y: auto;
+  }
+  .barra.is-menu-abierto .nav-manifold {
+    display: flex;
+    animation: menuDesplegar .2s ease-out;
+  }
+  .nav-manifold__tuberia {
+    display: none;
+  }
+  .nav-manifold__estaciones {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .nav-estacion {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: #fff;
+  }
+  .nav-estacion.is-activa {
+    background: var(--dorado-ambar) !important;
+    color: var(--azul-petroleo) !important;
+    border-color: #FFF3C4;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 720px) {
+  .portada__contenido { padding: 48px 0 56px; }
+  .portada__cifras li { min-width: 50%; }
+  .portada__cifras li:nth-child(odd) { border-left: 0; }
+  .portada__cifras li:nth-child(n + 3) { border-top: 1px solid rgba(255, 255, 255, .25); }
+  .seccion { padding: 52px 0; }
+
+  .pie__tarjetas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .toast-autor {
+    bottom: 12px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-width: none;
+  }
+  .toast-autor__tarjeta {
+    padding: 18px 18px 16px;
+  }
+  .toast-autor__btn-ok {
+    text-align: center;
+    width: 100%;
+  }
+  .barra__escudo,
+  .barra__escudo-img {
+    width: 38px;
+    height: 38px;
+  }
+  .barra__texto {
+    font-size: 12px;
+    letter-spacing: .04em;
+  }
+  .barra__texto small {
+    font-size: 10.5px;
+  }
+  .barra__boton-menu {
+    padding: 7px 11px;
+    font-size: 11px;
+  }
+}

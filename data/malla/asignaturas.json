@@ -1,0 +1,682 @@
+[
+  {
+    "codigo": "1000004-M",
+    "nombre": "Cálculo Diferencial",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000008-M",
+    "nombre": "Geometría Vectorial y Analítica",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3009822",
+    "nombre": "Introducción a la Ingeniería de Petróleos",
+    "creditos": 2,
+    "obligatoria": true,
+    "agrupacion": "ingenieria-basica",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006829",
+    "nombre": "Química General",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "quimica",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007000",
+    "nombre": "Geología Física",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "geologia",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000005-M",
+    "nombre": "Cálculo Integral",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 2,
+    "prerrequisitos": ["1000004-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000003-M",
+    "nombre": "Álgebra Lineal",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 2,
+    "prerrequisitos": ["1000008-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000019-M",
+    "nombre": "Física Mecánica",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "fisica",
+    "semestre": 2,
+    "prerrequisitos": ["1000004-M", "1000008-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010469",
+    "nombre": "Procesos Sedimentarios y Geología de Yacimientos",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "geologia",
+    "semestre": 2,
+    "prerrequisitos": ["3007000"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000034-M",
+    "nombre": "Química Orgánica",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "quimica",
+    "semestre": 2,
+    "prerrequisitos": ["3006829"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000035-M",
+    "nombre": "Laboratorio de Química Orgánica",
+    "creditos": 2,
+    "obligatoria": false,
+    "agrupacion": "quimica",
+    "semestre": 2,
+    "prerrequisitos": ["3006829", "1000034-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006825",
+    "nombre": "Laboratorio de Química General",
+    "creditos": 2,
+    "obligatoria": false,
+    "agrupacion": "quimica",
+    "semestre": 2,
+    "prerrequisitos": ["3006829"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007421",
+    "nombre": "Química Analítica",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "quimica",
+    "semestre": 2,
+    "prerrequisitos": ["3006829", "3006825"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000006-M",
+    "nombre": "Cálculo en Varias Variables",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 3,
+    "prerrequisitos": ["1000005-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000007-M",
+    "nombre": "Ecuaciones Diferenciales",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 3,
+    "prerrequisitos": ["1000005-M", "1000003-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000017-M",
+    "nombre": "Física de Electricidad y Magnetismo",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "fisica",
+    "semestre": 3,
+    "prerrequisitos": ["1000019-M", "1000005-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010478",
+    "nombre": "Termodinámica General",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "termodinamica",
+    "semestre": 3,
+    "prerrequisitos": ["1000019-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007309",
+    "nombre": "Ciencia de los Materiales",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "ingenieria-basica",
+    "semestre": 3,
+    "prerrequisitos": ["3006829"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010651",
+    "nombre": "Estadística I",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 4,
+    "prerrequisitos": ["1000005-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000020-M",
+    "nombre": "Física de Oscilaciones, Ondas y Óptica",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "fisica",
+    "semestre": 4,
+    "prerrequisitos": ["1000019-M", "1000007-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007814",
+    "nombre": "Fenómenos de Transporte",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "ingenieria-basica",
+    "semestre": 4,
+    "prerrequisitos": ["1000007-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010435",
+    "nombre": "Fundamentos de Programación",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "ingenieria-basica",
+    "semestre": 4,
+    "prerrequisitos": ["1000003-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007733",
+    "nombre": "Perforación I",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "perforacion-produccion",
+    "semestre": 4,
+    "prerrequisitos": ["3007309"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006905",
+    "nombre": "Matemáticas Especiales",
+    "creditos": 4,
+    "obligatoria": false,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 5,
+    "prerrequisitos": ["1000007-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006906",
+    "nombre": "Matemáticas Discretas",
+    "creditos": 4,
+    "obligatoria": false,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 5,
+    "prerrequisitos": ["1000004-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006907",
+    "nombre": "Métodos Numéricos",
+    "creditos": 4,
+    "obligatoria": false,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 5,
+    "prerrequisitos": ["1000005-M", "1000003-M"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010474",
+    "nombre": "Conversión de Energía en Sistemas Termofluídicos",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "termodinamica",
+    "semestre": 5,
+    "prerrequisitos": ["3010478"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010463",
+    "nombre": "Equilibrio en Sistemas Reactivos y Fenómenos de Superficie",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "termodinamica",
+    "semestre": 5,
+    "prerrequisitos": ["3010478"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010530",
+    "nombre": "Termodinámica del Equilibrio de Fases para Sistemas Multicomponentes",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "termodinamica",
+    "semestre": 5,
+    "prerrequisitos": ["3010478"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007707",
+    "nombre": "Geofísica",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "geologia",
+    "semestre": 5,
+    "prerrequisitos": ["3007000"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007710",
+    "nombre": "Geoquímica",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "geologia",
+    "semestre": 5,
+    "prerrequisitos": ["3007000"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007431",
+    "nombre": "Petrología Sedimentaria",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "geologia",
+    "semestre": 5,
+    "prerrequisitos": ["3007000"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007775",
+    "nombre": "Geología de Colombia",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "geologia",
+    "semestre": 5,
+    "prerrequisitos": ["3007000"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007767",
+    "nombre": "Elementos de Geología Estructural",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "geologia",
+    "semestre": 5,
+    "prerrequisitos": ["3007000"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007428",
+    "nombre": "Fluidos de Yacimiento",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "yacimientos-evaluacion-formaciones",
+    "semestre": 5,
+    "prerrequisitos": ["3007733"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007419",
+    "nombre": "Perforación II",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "perforacion-produccion",
+    "semestre": 5,
+    "prerrequisitos": ["3007733"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010408",
+    "nombre": "Fundamentos de Proyectos en Ingeniería",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "proyectos-ingenieria",
+    "semestre": 5,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007734",
+    "nombre": "Propiedades de la Roca Yacimiento",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "yacimientos-evaluacion-formaciones",
+    "semestre": 6,
+    "prerrequisitos": ["3007428", "3007814"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010407",
+    "nombre": "Estructuración y Evaluación de Proyectos de Ingeniería",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "proyectos-ingenieria",
+    "semestre": 6,
+    "prerrequisitos": ["3010408"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007600",
+    "nombre": "Perforación III",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 6,
+    "prerrequisitos": ["3007427"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007726",
+    "nombre": "Crudos y Derivados",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 6,
+    "prerrequisitos": ["3006829"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3008333",
+    "nombre": "Terminación y Reacondicionamiento de Pozos",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 6,
+    "prerrequisitos": ["3007427"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3009154",
+    "nombre": "Perforación Direccional Aplicada",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 6,
+    "prerrequisitos": ["3007419"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010054",
+    "nombre": "Combustibles y lubricantes minerales",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 6,
+    "prerrequisitos": ["3007428"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010057",
+    "nombre": "Depósitos Orgánicos en Pozos Productores",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 6,
+    "prerrequisitos": ["3007428"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010461",
+    "nombre": "Transporte y Distribución de Gas",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 6,
+    "prerrequisitos": ["3007426"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010181",
+    "nombre": "Logística del Transporte y de Hidrocarburos",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 6,
+    "prerrequisitos": ["3007426"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007426",
+    "nombre": "Manejo de Producción de Petróleo y Gas",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "perforacion-produccion",
+    "semestre": 7,
+    "prerrequisitos": ["3007814"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007601",
+    "nombre": "Producción por Flujo Natural",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "perforacion-produccion",
+    "semestre": 7,
+    "prerrequisitos": ["3007428"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007430",
+    "nombre": "Pruebas de Presión y Balance de Materiales",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "yacimientos-evaluacion-formaciones",
+    "semestre": 7,
+    "prerrequisitos": ["3007734"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007732",
+    "nombre": "Perfilaje de Pozos",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "yacimientos-evaluacion-formaciones",
+    "semestre": 7,
+    "prerrequisitos": ["3007734"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007730",
+    "nombre": "Levantamiento Artificial",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "perforacion-produccion",
+    "semestre": 8,
+    "prerrequisitos": ["3007601", "3007430"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007736",
+    "nombre": "Simulación de Yacimientos",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "yacimientos-evaluacion-formaciones",
+    "semestre": 8,
+    "prerrequisitos": ["3007430"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007429",
+    "nombre": "Monitoreo de Yacimientos",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 8,
+    "prerrequisitos": ["3010465"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007599",
+    "nombre": "Análisis Petrofísicos Especiales",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 8,
+    "prerrequisitos": ["3007734"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007725",
+    "nombre": "Aspectos Geomecánicos de la Ingeniería de Yacimientos",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 8,
+    "prerrequisitos": ["3007430"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010465",
+    "nombre": "Inyección de Agua",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "yacimientos-evaluacion-formaciones",
+    "semestre": 9,
+    "prerrequisitos": ["3007736"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007427",
+    "nombre": "Operaciones de Campo",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "perforacion-produccion",
+    "semestre": 9,
+    "prerrequisitos": ["3007732"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010439",
+    "nombre": "Proyecto Integrado de Ingeniería",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "proyectos-ingenieria",
+    "semestre": 9,
+    "prerrequisitos": ["3010407"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3008563",
+    "nombre": "Evaluación de Formaciones Heterogéneas",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 9,
+    "prerrequisitos": ["3007430"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3008904",
+    "nombre": "Seminario de Daño de Formación",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 9,
+    "prerrequisitos": ["3007430"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010663",
+    "nombre": "Tópicos Avanzados de Pruebas de Presión",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 9,
+    "prerrequisitos": ["3007430"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3009153",
+    "nombre": "Yacimientos no Convencionales",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 9,
+    "prerrequisitos": ["3007734", "3007428"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3008997",
+    "nombre": "Daño de Formación",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 9,
+    "prerrequisitos": ["3007734"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010349",
+    "nombre": "Métodos de Recobro Mejorado",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 9,
+    "prerrequisitos": ["3010465"],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007486",
+    "nombre": "Trabajo de Grado",
+    "creditos": 6,
+    "obligatoria": true,
+    "agrupacion": "trabajo-de-grado",
+    "semestre": 10,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3010687",
+    "nombre": "Práctica de Extensión",
+    "creditos": 6,
+    "obligatoria": false,
+    "agrupacion": "trabajo-de-grado",
+    "semestre": 10,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007485",
+    "nombre": "Cursos de Posgrado",
+    "creditos": 6,
+    "obligatoria": false,
+    "agrupacion": "trabajo-de-grado",
+    "semestre": 10,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  }
+]

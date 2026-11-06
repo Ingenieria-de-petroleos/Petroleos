@@ -1,0 +1,27 @@
+{
+  "titulo": "Perfil del Ingeniero de Petróleos Egresado",
+  "intro": "Un profesional formado bajo el histórico lema de la Facultad de Minas: «Trabajo y Rectitud», con sólida fundamentación científica, visión de sostenibilidad socioambiental, solvencia digital y liderazgo estratégico en el sector energético.",
+  "rasgos": [
+    {
+      "icono": "yacimientos",
+      "titulo": "Evaluación y Simulación de Yacimientos",
+      "texto": "Adquiere e integra datos de registros geofísicos, núcleos y fluidos para construir modelos geocientíficos 3D que simulan el comportamiento del yacimiento y maximizan el factor de recobro."
+    },
+    {
+      "icono": "perforacion",
+      "titulo": "Perforación y Producción de Vanguardia",
+      "texto": "Diseña, supervisa y optimiza pozos complejos (direccionales, horizontales, de aguas profundas) y sistemas de levantamiento artificial, garantizando la seguridad operativa y la integridad del subsuelo."
+    },
+    {
+      "icono": "transicion",
+      "titulo": "Liderazgo en Transición Energética",
+      "texto": "Aplica competencias en ingeniería del subsuelo al desarrollo de proyectos de energía geotérmica, almacenamiento seguro de CO2 (CCUS), transporte de gas natural y tecnologías bajas en emisiones."
+    },
+    {
+      "icono": "gestion",
+      "titulo": "Gestión Estratégica, Ética y Sostenibilidad",
+      "texto": "Evalúa proyectos energéticos con rigurosidad técnica, viabilidad financiera y cumplimiento de normativas ambientales y comunitarias, promoviendo el progreso energético responsable del país."
+    }
+  ],
+  "fuente": "Proyecto Educativo del Programa (PEP) de Ingeniería de Petróleos, Facultad de Minas, Universidad Nacional de Colombia Sede Medellín."
+}

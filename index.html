@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ingeniería de Petróleos · UNAL Medellín</title>
+  <meta name="description" content="Portal oficial de Ingeniería de Petróleos de la Facultad de Minas, Universidad Nacional de Colombia Sede Medellín: información del programa, malla curricular interactiva (172 créditos), capítulos estudiantiles (SPE, ACIPET, EAGE, ETSG), recursos de estudio y guía estudiantil.">
+  <link rel="icon" type="image/png" href="img/logo-petroleos.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body data-pagina="inicio">
+
+  <div id="barra"></div>
+
+  <!-- PORTADA / HERO LANDING -->
+  <!-- PORTADA DE INICIO: REDISEÑO EN 2 COLUMNAS CON CENTRO DE ANIMACIÓN PETROLERA -->
+  <section class="portada foto foto--entrada hero-petroleos">
+    <div class="hero-petroleos__ondas" aria-hidden="true">
+      <svg class="hero-petroleos__svg-estratigrafia" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="rgba(212, 175, 55, 0.08)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,138.7C672,149,768,203,864,208C960,213,1056,171,1152,144C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        <path fill="rgba(11, 31, 58, 0.65)" d="M0,192L48,181.3C96,171,192,149,288,160C384,171,480,213,576,218.7C672,224,768,192,864,181.3C960,171,1056,181,1152,197.3C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+    </div>
+
+    <div class="contenedor hero-petroleos__grid">
+      <!-- COLUMNA IZQUIERDA: INFORMACIÓN Y TITULAR OFICIAL -->
+      <div class="hero-petroleos__info">
+        <div class="hero-petroleos__insignia">
+          <span class="hero-petroleos__icono-unal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </span>
+          <span>Facultad de Minas · UNAL Sede Medellín</span>
+          <span class="hero-petroleos__snies-pill">SNIES 119</span>
+        </div>
+
+        <h1 class="hero-petroleos__titulo">
+          <span class="hero-petroleos__antetitulo">Pregrado Oficial</span>
+          <span class="letras-varsity hero-petroleos__nombre-carrera" data-texto="Ingeniería de Petróleos">Ingeniería de Petróleos</span>
+        </h1>
+
+        <p class="hero-petroleos__desc">
+          Liderando la caracterización geocientífica del subsuelo, la optimización en perforación y yacimientos, el desarrollo integral y eficiente de hidrocarburos y la vanguardia en la transición energética sostenible de Colombia y el mundo.
+        </p>
+
+        <!-- DATOS CLAVE DEL PROGRAMA EN EL HERO (SIN BOTONES DE ACCIÓN) -->
+        <ul class="portada__cifras hero-petroleos__cifras" id="portada-cifras" aria-label="Datos clave del programa"></ul>
+      </div>
+
+      <!-- COLUMNA DERECHA: GEMELO DIGITAL HOLOGRÁFICO DEL SUBSUELO Y YACIMIENTOS -->
+      <div class="hero-petroleos__visual" id="petro-visual-wrap">
+        <div class="digital-twin-console" id="digital-twin-console">
+          
+          <!-- Encabezado de la consola de telemetría -->
+          <div class="console-header">
+            <div class="console-header__radar">
+              <span class="console-title">GEMELO DIGITAL · SUBSUELO &amp; YACIMIENTOS</span>
+            </div>
+            <div class="console-header__badge">
+              <span id="dt-modo-label">PRODUCCIÓN ACTIVA</span>
+            </div>
+          </div>
+
+          <!-- Selector interactivo de régimen tecnológico -->
+          <div class="console-switch" role="group" aria-label="Régimen operativo del gemelo digital">
+            <button type="button" class="console-switch__btn is-active" id="btn-dt-produccion" data-modo="produccion">
+              <span>Yacimiento &amp; Crudo (EOR)</span>
+            </button>
+            <button type="button" class="console-switch__btn" id="btn-dt-ccus" data-modo="ccus">
+              <span>Transición &amp; CCUS</span>
+            </button>
+          </div>
+
+          <!-- Lienzo Interactivo 3D con partículas de fluidos y trayectoria del pozo -->
+          <div class="console-canvas-wrap">
+            <canvas id="canvas-petro-digital" width="520" height="300" aria-label="Simulación 3D interactiva del yacimiento y flujo de hidrocarburos"></canvas>
+            
+            <!-- HUD de Telemetría Flotante sobre el modelo 3D -->
+            <div class="console-hud">
+              <div class="hud-item hud-item--depth">
+                <span class="hud-label">PROFUNDIDAD TVD</span>
+                <span class="hud-val" id="hud-tvd">10,850 FT</span>
+                <span class="hud-sub">MD 13,240 FT · INC 89.2°</span>
+              </div>
+              <div class="hud-item hud-item--pressure">
+                <span class="hud-label">PRESIÓN FONDO (PWF)</span>
+                <span class="hud-val" id="hud-presion">4,180 PSI</span>
+                <span class="hud-sub">GRADIENTE 0.465 PSI/FT</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pie de consola: Telemetría de Producción / Almacenamiento -->
+          <div class="console-footer">
+            <div class="console-metric">
+              <span class="metric-label">CAUDAL OPERATIVO</span>
+              <span class="metric-val" id="dt-caudal">3,450 BOPD</span>
+            </div>
+            <div class="console-metric">
+              <span class="metric-label">FACTOR DE RECOBRO</span>
+              <span class="metric-val" id="dt-recobro">48.2 %</span>
+            </div>
+            <div class="console-metric console-metric--highlight">
+              <span class="metric-label">ESTADO DE FORMACIÓN</span>
+              <span class="metric-val" id="dt-estado">POROSIDAD 22% · PAYZONE</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN INTERACTIVA: EXPLORADOR DEL SUBSUELO Y YACIMIENTOS -->
+  <section class="seccion seccion--simulador" id="simulador-subsuelo" aria-labelledby="simulador-titulo">
+    <div class="contenedor">
+      <div class="seccion-titulo">
+        <p class="seccion-titulo__antetitulo">Visualizador Interactivo de Ingeniería de Petróleos</p>
+        <h2 id="simulador-titulo">Dinámica del Subsuelo & Recuperación Energética</h2>
+        <p class="seccion-titulo__intro">Interactúa con los diferentes regímenes del yacimiento y descubre cómo la ingeniería de petróleos extrae, optimiza y descarboniza la energía desde miles de metros bajo tierra.</p>
+      </div>
+
+      <div class="simulador-caja">
+        <!-- Selector de modos -->
+        <div class="simulador-tabs" role="tablist" aria-label="Modos operativos de yacimiento">
+          <button type="button" class="simulador-tab is-activa" data-modo="flujo-natural" role="tab" aria-selected="true">
+            1. Flujo Natural
+          </button>
+          <button type="button" class="simulador-tab" data-modo="perforacion" role="tab" aria-selected="false">
+            2. Perforación Direccional
+          </button>
+          <button type="button" class="simulador-tab" data-modo="recobro-eor" role="tab" aria-selected="false">
+            3. Recobro Mejorado (EOR)
+          </button>
+          <button type="button" class="simulador-tab" data-modo="transicion" role="tab" aria-selected="false">
+            4. Transición &amp; CCUS
+          </button>
+        </div>
+
+        <div class="simulador-grid">
+          <!-- Columna Izquierda: Gráfico Visual del Subsuelo con separación limpia de tubería y etiquetas -->
+          <div class="simulador-visual" id="simulador-visual">
+            <div class="estrato estrato--superficie">
+              <div class="estrato__pozo-col">
+                <div class="estrato__torre">
+                  <svg viewBox="0 0 60 70" width="44" height="52" fill="currentColor" aria-hidden="true">
+                    <path d="M30 4 L14 66 L20 66 L26 42 L34 42 L40 66 L46 66 L30 4 Z M28 20 L32 20 L33 36 L27 36 Z" opacity="0.95"/>
+                    <rect x="25" y="0" width="10" height="5" rx="1"/>
+                    <line x1="18" y1="52" x2="42" y2="52" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  <div class="estrato__gota-animada" id="sim-gota" title="Flujo de hidrocarburos"></div>
+                </div>
+              </div>
+              <div class="estrato__info-col">
+                <span class="estrato__etiqueta">Superficie y Cabeza de Pozo (Wellhead)</span>
+                <span class="estrato__cota">0.00 FT · BOCA DE POZO Y SEPARADORES</span>
+              </div>
+            </div>
+
+            <div class="estrato estrato--sello">
+              <div class="estrato__pozo-col">
+                <div class="estrato__sarta-linea" id="sim-sarta-sello"></div>
+              </div>
+              <div class="estrato__info-col">
+                <span class="estrato__etiqueta">Roca Sello Impermeable (Lutitas de Confinamiento)</span>
+                <span class="estrato__cota">7,200 FT · TRAMPA ESTRATIGRÁFICA EFICIENTE</span>
+              </div>
+            </div>
+
+            <div class="estrato estrato--gas">
+              <div class="estrato__pozo-col">
+                <div class="estrato__sarta-linea" id="sim-sarta-gas"></div>
+              </div>
+              <div class="estrato__info-col">
+                <span class="estrato__etiqueta">Capa de Gas Libre (Gas Cap · Presión Alta)</span>
+                <span class="estrato__cota">8,900 FT · CASQUETE DE GAS EN EXPANSIÓN</span>
+              </div>
+            </div>
+
+            <div class="estrato estrato--petroleo">
+              <div class="estrato__pozo-col">
+                <div class="estrato__pozo-interactivo" id="sim-pozo-interactivo"></div>
+              </div>
+              <div class="estrato__info-col">
+                <span class="estrato__etiqueta">Roca Reservorio de Crudo (Areniscas Porosas)</span>
+                <span class="estrato__cota">9,450 FT · ZONA PRODUCTORA (PAY ZONE)</span>
+              </div>
+              <!-- Trayectoria horizontal o swept zone para modos especiales -->
+              <div class="estrato__pozo-horizontal-overlay" id="sim-pozo-h"></div>
+            </div>
+
+            <div class="estrato estrato--acuifero">
+              <div class="estrato__pozo-col">
+                <div class="estrato__acuifero-indicador"></div>
+              </div>
+              <div class="estrato__info-col">
+                <span class="estrato__etiqueta">Acuífero Basal (Empuje Hidrostático Natural)</span>
+                <span class="estrato__cota">11,800 FT · SOPORTE DE PRESIÓN HIDRÁULICA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Panel de Telemetría y Explicación Técnica -->
+          <div class="simulador-panel">
+            <div class="simulador-panel__badge" id="sim-badge">RÉGIMEN OPERATIVO 01</div>
+            <h3 class="simulador-panel__titulo" id="sim-titulo">Producción por Flujo Natural</h3>
+            <p class="simulador-panel__desc" id="sim-desc">
+              La energía propia del reservorio (expansión del gas disuelto y empuje de agua) impulsa los hidrocarburos hacia la superficie sin asistencia mecánica externa. Se monitorean balances de materia y presiones de fondo fluyente.
+            </p>
+
+            <div class="simulador-telemetria">
+              <div class="telemetria-card">
+                <span class="telemetria-card__label">Profundidad TVD</span>
+                <span class="telemetria-card__valor" id="sim-prof">9,450 ft</span>
+              </div>
+              <div class="telemetria-card">
+                <span class="telemetria-card__label">Presión de Fondo (Pwf)</span>
+                <span class="telemetria-card__valor" id="sim-presion">3,820 psi</span>
+              </div>
+              <div class="telemetria-card">
+                <span class="telemetria-card__label">Caudal Estimado</span>
+                <span class="telemetria-card__valor" id="sim-caudal">3,250 BOPD</span>
+              </div>
+              <div class="telemetria-card">
+                <span class="telemetria-card__label">Factor de Recobro</span>
+                <span class="telemetria-card__valor" id="sim-recobro">28.4 %</span>
+              </div>
+            </div>
+
+            <div class="simulador-panel__materias">
+              <span class="materias-label">Materias clave relacionadas en la carrera:</span>
+              <div class="materias-pildoras" id="sim-materias">
+                <a href="malla.html" class="materia-chip">Fluidos de Yacimiento</a>
+                <a href="malla.html" class="materia-chip">Producción por Flujo Natural</a>
+                <a href="malla.html" class="materia-chip">Propiedades de la Roca</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- EL PROGRAMA: se carga al abrir la página -->
+    <section class="seccion programa" id="programa" aria-labelledby="programa-titulo">
+      <div class="contenedor" id="programa-contenido">
+        <p class="cargando">Cargando programa…</p>
+      </div>
+    </section>
+
+    <!-- PERFIL DEL EGRESADO: se carga cuando la persona se acerca -->
+    <section class="seccion perfil" id="perfil" aria-labelledby="perfil-titulo" data-carga="perfil">
+      <div class="contenedor" id="perfil-contenido">
+        <p class="cargando">Cargando perfil…</p>
+      </div>
+    </section>
+
+    <!-- GRUPOS ESTUDIANTILES Y CAPÍTULOS TÉCNICOS: se carga cuando la persona se acerca -->
+    <section class="grupos" id="grupos" aria-labelledby="grupos-titulo" data-carga="grupos">
+      <div class="contenedor" id="grupos-contenido">
+        <p class="cargando">Cargando grupos…</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="pie"></div>
+
+  <script src="js/comun.js"></script>
+  <script src="js/inicio.js"></script>
+</body>
+</html>

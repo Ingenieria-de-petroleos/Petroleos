@@ -1,0 +1,79 @@
+{
+  "nombre": "Ingeniería de Petróleos",
+  "universidad": "Universidad Nacional de Colombia",
+  "sede": "Medellín",
+  "facultad": "Facultad de Minas",
+  "lema": "Trabajo y Rectitud",
+  "descripcion": [
+    "La Ingeniería de Petróleos en la Facultad de Minas es un programa de excelencia científica y tecnológica con sólidos fundamentos en ciencias exactas, geociencias e ingeniería aplicada, orientado a la exploración, caracterización, desarrollo y producción óptima de los recursos hidrocarburíferos y energéticos del país.",
+    "Forma profesionales integrales con criterio ético, rigor técnico, alta sensibilidad socioambiental y visión prospectiva de la transición energética global, preparados para diseñar soluciones de vanguardia en perforación de pozos, simulación de yacimientos, levantamiento artificial, operaciones de superficie, almacenamiento de carbono (CCUS), energía geotérmica y aprovechamiento del gas natural."
+  ],
+  "rutas": [
+    {
+      "id": "yacimientos-simulacion",
+      "nombre": "Yacimientos y Modelamiento del Subsuelo",
+      "descripcion": "Caracterización petrofísica, balance de materia, pruebas de presión, modelamiento numérico y recobro mejorado (EOR/IOR).",
+      "icono": "yacimientos",
+      "color": "#D4AF37"
+    },
+    {
+      "id": "perforacion-completamiento",
+      "nombre": "Perforación y Completamiento de Pozos",
+      "descripcion": "Diseño de pozos direccionales y profundos, control de pozos, fluidos de perforación y completamiento onshore y offshore.",
+      "icono": "perforacion",
+      "color": "#0B1F3A"
+    },
+    {
+      "id": "produccion-operaciones",
+      "nombre": "Producción y Levantamiento Artificial",
+      "descripcion": "Flujo multifásico por flujo natural, bombeo electrosumergible, mecánico, BCP, gas lift e instalaciones de superficie.",
+      "icono": "produccion",
+      "color": "#1C1C1C"
+    },
+    {
+      "id": "geociencias-geologia",
+      "nombre": "Geociencias y Geología del Petróleo",
+      "descripcion": "Estratigrafía sedimentaria, interpretación sísmica, registros geofísicos de pozos y evaluación de formaciones.",
+      "icono": "geologia",
+      "color": "#006633"
+    },
+    {
+      "id": "transicion-energetica",
+      "nombre": "Transición Energética y Nuevos Recursos",
+      "descripcion": "Captura y almacenamiento de carbono (CCUS), energía geotérmica profunda, gas natural licuado e hidrógeno.",
+      "icono": "transicion",
+      "color": "#B8860B"
+    }
+  ],
+  "ficha": [
+    { "etiqueta": "Título que otorga", "valor": "Ingeniero(a) de Petróleos" },
+    { "etiqueta": "Créditos del plan", "valor": "172 créditos" },
+    { "etiqueta": "Duración del plan", "valor": "10 semestres" },
+    { "etiqueta": "Modalidad", "valor": "Presencial" },
+    { "etiqueta": "Jornada", "valor": "Diurna" },
+    { "etiqueta": "Sede y facultad", "valor": "Medellín · Facultad de Minas" },
+    { "etiqueta": "Área Curricular", "valor": "Ingeniería Química e Ingeniería de Petróleos" },
+    { "etiqueta": "Código SNIES", "valor": "119" },
+    { "etiqueta": "Código SIA", "valor": "2542" },
+    { "etiqueta": "Normativa Vigente", "valor": "Acuerdo 162 de 2018 (C. Académico) · Acuerdos 29/2019, 66/2020 y 10/2022 (C. Facultad)" }
+  ],
+  "cifras": [
+    { "valor": "172", "texto": "créditos" },
+    { "valor": "10", "texto": "semestres" },
+    { "valor": "Presencial", "texto": "jornada diurna" },
+    { "valor": "SNIES 119", "texto": "registro ministerial" }
+  ],
+  "acreditacion": {
+    "estado": "Acreditación de Alta Calidad · Ministerio de Educación Nacional",
+    "hitos": [
+      { "anio": "Res. 3970 / 2018", "texto": "Resolución 3970 de 2018 del MEN que otorga la Renovación de la Acreditación de Alta Calidad al programa." },
+      { "anio": "Acuerdo 162 / 2018", "texto": "Modernización integral del plan curricular por el Consejo Académico para responder a la digitalización, yacimientos complejos y transición energética." },
+      { "anio": "Tradición & Futuro", "texto": "Uno de los programas de ingeniería de mayor tradición y prestigio del país, líder en innovación energética y geociencias del subsuelo." }
+    ],
+    "nota": "Para consultas normativas adicionales, remitirse a la Vicedecanatura Académica de la Facultad de Minas, Campus Robledo."
+  },
+  "fuentes": [
+    { "titulo": "Página oficial del programa · Facultad de Minas UNAL", "url": "https://old-minas.medellin.unal.edu.co/formacion/pregrado/ingenieriadepetroleos" },
+    { "titulo": "Facultad de Minas · Universidad Nacional de Colombia", "url": "https://minas.medellin.unal.edu.co/" }
+  ]
+}
