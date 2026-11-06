@@ -943,6 +943,52 @@ a { color: var(--azul-brillante); }
   color: var(--azul-petroleo);
 }
 
+.pie__tarjeta-enlaces--iconos {
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.pie__enlace-contacto--icono {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  transition: all .2s ease;
+  padding: 0;
+}
+
+.pie__enlace-contacto--icono.pie__enlace-contacto--ig {
+  color: #B8860B;
+  border-color: rgba(212, 175, 55, 0.4);
+  background: #fffdf5;
+}
+
+.pie__enlace-contacto--icono.pie__enlace-contacto--ig:hover {
+  background: #B8860B;
+  color: #ffffff;
+  border-color: #B8860B;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+}
+
+.pie__enlace-contacto--icono.pie__enlace-contacto--correo {
+  color: var(--azul-petroleo);
+  border-color: rgba(11, 31, 58, 0.25);
+  background: #f0f4f9;
+}
+
+.pie__enlace-contacto--icono.pie__enlace-contacto--correo:hover {
+  background: var(--azul-petroleo);
+  color: #ffffff;
+  border-color: var(--azul-petroleo);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(11, 31, 58, 0.3);
+}
+
 
 /* ---------- 7. Mensaje flotante de bienvenida (Diseño modal oficial) ---------- */
 
@@ -1106,6 +1152,59 @@ a { color: var(--azul-brillante); }
   color: var(--azul-petroleo);
 }
 
+.toast-autor__acciones {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.toast-autor__iconos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toast-autor__icono {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.toast-autor__icono--ig {
+  background: #fff8e1;
+  border: 1.5px solid var(--dorado-ambar);
+  color: #B8860B;
+}
+
+.toast-autor__icono--ig:hover {
+  background: #B8860B;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+}
+
+.toast-autor__icono--correo {
+  background: #f0f4f9;
+  border: 1.5px solid #c7d8eb;
+  color: var(--azul-petroleo);
+}
+
+.toast-autor__icono--correo:hover {
+  background: var(--azul-petroleo);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(11, 31, 58, 0.3);
+}
+
 .toast-autor__btn-ok {
   background: var(--azul-petroleo);
   color: #ffffff;
@@ -1119,7 +1218,7 @@ a { color: var(--azul-brillante); }
   text-transform: uppercase;
   cursor: pointer;
   width: fit-content;
-  margin-top: 4px;
+  margin-top: 0;
   box-shadow: 0 4px 12px rgba(11, 31, 58, 0.35);
   transition: background .15s, transform .1s;
 }
@@ -1230,6 +1329,14 @@ a { color: var(--azul-brillante); }
   }
   .toast-autor__tarjeta {
     padding: 18px 18px 16px;
+  }
+  .toast-autor__acciones {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+  .toast-autor__iconos {
+    justify-content: center;
+    width: 100%;
   }
   .toast-autor__btn-ok {
     text-align: center;
