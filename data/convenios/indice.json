@@ -9,6 +9,11 @@
       "id": "beneficio",
       "nombre": "Beneficios para estudiantes",
       "descripcion": "Programas de la empresa para estudiantes de educación superior: no son convenios de la UNAL, pero los puedes pedir con tu condición de estudiante."
+    },
+    {
+      "id": "auxilio",
+      "nombre": "Auxilios y Apoyos UNAL",
+      "descripcion": "Apoyos socioeconómicos y alimentarios de Bienestar Universitario (Área de Gestión y Fomento Socioeconómico) para estudiantes de pregrado."
     }
   ],
   "convenios": [
@@ -83,6 +88,24 @@
       "icono": "nota",
       "color": "#1a9e5c",
       "resumen": "Descuento para estudiantes de educación superior, verificado con SheerID, hasta por 4 años."
+    },
+    {
+      "id": "bienestar-auxilios",
+      "nombre": "Auxilios y Apoyos Socioeconómicos (Bienestar Universitario)",
+      "tipo": "auxilio",
+      "categoria": "Gestión y Fomento Socioeconómico",
+      "icono": "manos",
+      "color": "#0B1F3A",
+      "resumen": "Apoyo alimentario, subsidios económicos, bono de transporte y alojamiento estudiantil de Bienestar Universitario Sede Medellín."
+    },
+    {
+      "id": "alianzas-estrategicas",
+      "nombre": "Alianzas Estratégicas para el Bienestar",
+      "tipo": "auxilio",
+      "categoria": "Gestión y Fomento Socioeconómico",
+      "icono": "alianza",
+      "color": "#D4AF37",
+      "resumen": "Convenios con ICETEX, Sapiencia, Metro de Medellín y entidades aliadas para financiación, tiquete estudiantil y becas."
     }
   ]
 }
