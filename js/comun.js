@@ -167,6 +167,7 @@ function dibujarEscudo() {
 
 const PAGINAS = [
   { id: 'inicio', texto: 'Inicio', url: 'index.html' },
+  { id: 'avance', texto: 'Mi Avance', url: 'avance.html' },
   { id: 'malla', texto: 'Malla Curricular', url: 'malla.html' },
   { id: 'intercampus', texto: 'Rutas Intercampus', url: 'intercampus.html' },
   { id: 'convenios', texto: 'Convenios', url: 'convenios.html' },
