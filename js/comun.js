@@ -464,7 +464,7 @@ function mostrarMensajeAutor() {
       </div>
 
       <p class="toast-autor__mensaje">
-        ¡Hola! Desarrollé este portal con el propósito de apoyar, guiar y facilitar la vida universitaria de todos los estudiantes de <strong>Ingeniería de Petróleos</strong>. Cuentan con mi total respaldo desde la representación estudiantil de Sistemas para seguir construyendo herramientas digitales que fortalezcan nuestra vida académica en la Facultad de Minas.
+        ¡Hola! Soy <strong class="toast-autor__destacado">Santiago Escobar</strong>. Creé esta plataforma para hacerte la vida en la U mucho más fácil.<br>Si encuentras algún error o tienes ideas para mejorarla, ¡escríbeme!
       </p>
 
       <div class="toast-autor__acciones">
@@ -476,7 +476,7 @@ function mostrarMensajeAutor() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </a>
         </div>
-        <button class="toast-autor__btn-ok" id="toast-autor-ok" type="button">¡ENTENDIDO!</button>
+        <button class="toast-autor__btn-ok" id="toast-autor-ok" type="button">¡Entendido!</button>
       </div>
     </div>`;
 

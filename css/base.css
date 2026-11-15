@@ -1112,6 +1112,12 @@ a { color: var(--azul-brillante); }
   margin: 0;
 }
 
+.toast-autor__destacado {
+  color: #2563eb;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
 .toast-autor__mensaje strong {
   color: var(--azul-petroleo);
   font-weight: 700;

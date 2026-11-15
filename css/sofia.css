@@ -169,6 +169,7 @@
   width: 410px;
   max-width: calc(100vw - 32px);
   height: min(640px, calc(100vh - 120px));
+  max-height: calc(100dvh - 120px);
   background: var(--sofia-fondo-tarjeta);
   border: 1.5px solid var(--sofia-borde);
   border-radius: 22px;
@@ -206,6 +207,7 @@
   background: linear-gradient(135deg, rgba(11, 31, 58, 0.95), rgba(14, 43, 80, 0.9));
   border-bottom: 1px solid var(--sofia-borde);
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .sofia-cabecera__identidad {
@@ -213,6 +215,7 @@
   align-items: center;
   gap: 12px;
   min-width: 0;
+  flex: 1;
 }
 
 .sofia-cabecera__avatar-wrap {
@@ -238,6 +241,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
+  overflow: hidden;
 }
 
 .sofia-cabecera__nombre-wrap {
@@ -253,6 +257,7 @@
   color: #ffffff;
   letter-spacing: -0.3px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .sofia-cabecera__tag {
@@ -265,6 +270,7 @@
   color: var(--sofia-dorado-acento);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  flex-shrink: 0;
 }
 
 .sofia-cabecera__estado {
@@ -274,6 +280,9 @@
   font-size: 11.5px;
   color: var(--sofia-texto-suave);
   margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sofia-cabecera__punto-estado {
@@ -282,12 +291,14 @@
   border-radius: 50%;
   background: #10B981;
   box-shadow: 0 0 6px #10B981;
+  flex-shrink: 0;
 }
 
 .sofia-cabecera__acciones {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
 .sofia-btn-icono {
@@ -302,6 +313,7 @@
   align-items: center;
   justify-content: center;
   transition: background 0.2s, color 0.2s, transform 0.15s;
+  flex-shrink: 0;
 }
 
 .sofia-btn-icono:hover {
@@ -320,6 +332,7 @@
 
 .sofia-mensajes {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
   padding: 16px;
   display: flex;
@@ -522,6 +535,7 @@
   padding: 12px 14px;
   background: rgba(11, 31, 58, 0.95);
   border-top: 1px solid var(--sofia-borde);
+  flex-shrink: 0;
 }
 
 .sofia-input {
@@ -662,19 +676,25 @@
     right: 16px;
   }
 
+  .sofia-boton {
+    width: 56px;
+    height: 56px;
+  }
+
   .sofia-ventana {
-    bottom: 84px;
+    bottom: 82px;
     right: 12px;
     left: 12px;
     width: auto;
-    height: 520px;
-    max-height: calc(100vh - 100px);
+    max-width: none;
+    height: min(580px, calc(100dvh - 96px), calc(100vh - 96px));
+    max-height: calc(100dvh - 96px);
     border-radius: 18px;
   }
 
-  .sofia-boton {
-    width: 58px;
-    height: 58px;
+  .sofia-cabecera {
+    padding: 12px 14px;
+    gap: 8px;
   }
 
   .sofia-avatar-svg {
